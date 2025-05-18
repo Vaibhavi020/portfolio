@@ -1,20 +1,24 @@
 "use client";
+
 import { useEffect, useState } from "react";
 
 export default function useActiveSection(sectionIds: string[]) {
-  const [activeId, setActiveId] = useState<string>("");
+  const [activeId, setActiveId] = useState("");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        const visibleSection = entries.find((entry) => entry.isIntersecting);
-        if (visibleSection?.target.id) {
-          setActiveId(visibleSection.target.id);
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible.length > 0) {
+          setActiveId(visible[0].target.id);
         }
       },
       {
-        rootMargin: "-50% 0px -50% 0px",
-        threshold: 0.1,
+        rootMargin: "-30% 0px -50% 0px", // Adjust as needed
+        threshold: 0.4,
       }
     );
 

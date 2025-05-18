@@ -2,9 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Mail, MapPin, Calendar, CircleUser, ArrowUp } from "lucide-react";
+import { Mail, MapPin, Calendar, CircleUser } from "lucide-react";
 import SectionTitle from "@/components/SectionTitle";
 import ScrollButton from "./ScrollButton";
 

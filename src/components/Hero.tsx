@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { Send, Download, ChevronDown } from "lucide-react";
+import { Send, Download } from "lucide-react";
 
 import Link from "next/link";
 import ScrollButton from "./ScrollButton";
