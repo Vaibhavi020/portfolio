@@ -15,7 +15,7 @@ const images = [
   "profile-about.jpg",
   "profile-ayush.jpeg",
   "ayush-soni-hero.jpeg",
-]; // Replace with your image paths
+];
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -93,10 +93,7 @@ const Hero = () => {
             </a>
 
             <a href="/assets/Ayush_Soni___Resume.pdf" download>
-              <Button
-                // variant="outline"
-                className="bg-transparent border-1 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition"
-              >
+              <Button className="bg-transparent border-1 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition">
                 <Download className="h-4 w-4" />
                 Download Resume
               </Button>
@@ -148,13 +145,6 @@ const Hero = () => {
           </motion.div>
         </AnimatePresence>
       </div>
-      {/* <a
-        href="#about"
-        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-primary text-white p-3 rounded-full shadow-md hover:scale-105 transition"
-        aria-label="Scroll to About"
-      >
-        <ChevronDown className="w-5 h-5" />
-      </a> */}
       <ScrollButton direction="down" targetId="about" />
     </section>
   );

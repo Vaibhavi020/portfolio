@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 import { Menu, X } from "lucide-react";
 
@@ -73,9 +72,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 text-2xl font-bold text-gray-900 dark:text-white">
-            <Link href="#hero" onClick={() => handleLinkClick("#hero")}>
-              AyushSoni
-            </Link>
+            <a href="#hero">AyushSoni</a>
           </div>
 
           {/* Desktop Menu */}
@@ -84,7 +81,6 @@ const Navbar = () => {
               <a
                 key={href}
                 href={href}
-                onClick={() => handleLinkClick(href)}
                 className={`
                   relative px-3 py-2 text-sm font-medium transition-colors
                   text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white

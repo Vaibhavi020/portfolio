@@ -118,13 +118,6 @@ export default function AboutMe() {
       </div>
 
       {/* Scroll Up Button */}
-      {/* <a
-        href="#hero"
-        className="absolute bottom-4 right-4 bg-primary text-white p-3 rounded-full shadow-md hover:scale-105 transition"
-        aria-label="Scroll to top"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </a> */}
       <ScrollButton direction="up" targetId="hero" />
     </section>
   );
