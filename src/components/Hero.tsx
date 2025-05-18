@@ -40,7 +40,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="text-indigo-600 dark:text-indigo-400">
               Ayush Soni
             </span>
@@ -57,6 +57,7 @@ const Hero = () => {
                 "Software Engineer",
                 "Full Stack Developer",
                 "Traveller",
+                "Adventurer",
                 "Gamer",
               ]}
               loop
@@ -74,8 +75,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            I'm a creative developer based in India, and I'm very passionate and
-            dedicated to my work.
+            I&apos;m a creative developer based in India, and I&apos;m very
+            passionate and dedicated to my work.
           </motion.p>
 
           {/* Buttons */}

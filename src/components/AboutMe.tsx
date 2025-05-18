@@ -65,14 +65,14 @@ export default function AboutMe() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-bold tracking-tight">
-            I'm a Passionate{" "}
+            I&apos;m a Passionate{" "}
             <span className="text-indigo-600 dark:text-indigo-400">
               Software Engineer
             </span>
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed">
-            Hi, I'm a dedicated Software Developer based in India. I have over 3
-            years of experience building modern and performant full-stack
+            Hi, I&apos;m a dedicated Software Developer based in India. I have
+            over 3 years of experience building modern and performant full-stack
             applications. Currently, I am working at{" "}
             <span className="font-semibold text-indigo-600 dark:text-indigo-400">
               Successive Digital
