@@ -120,3 +120,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 50% 50% 50% 50%;
+  }
+  33% {
+    border-radius: 40% 60% 55% 45%;
+  }
+  66% {
+    border-radius: 60% 40% 45% 55%;
+  }
+}
+
+.animate-blob {
+  animation: blob 8s infinite ease-in-out;
+}
