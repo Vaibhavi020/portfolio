@@ -6,9 +6,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { Send, Download } from "lucide-react";
+import { Send, Download, ChevronDown } from "lucide-react";
 
 import Link from "next/link";
+import ScrollButton from "./ScrollButton";
 
 const images = [
   "profile-about.jpg",
@@ -27,7 +28,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+    <section
+      id="hero"
+      className="w-full flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left: Text Content */}
         <div className="space-y-6 text-center md:text-left">
@@ -144,6 +148,14 @@ const Hero = () => {
           </motion.div>
         </AnimatePresence>
       </div>
+      {/* <a
+        href="#about"
+        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-primary text-white p-3 rounded-full shadow-md hover:scale-105 transition"
+        aria-label="Scroll to About"
+      >
+        <ChevronDown className="w-5 h-5" />
+      </a> */}
+      <ScrollButton direction="down" targetId="about" />
     </section>
   );
 };
