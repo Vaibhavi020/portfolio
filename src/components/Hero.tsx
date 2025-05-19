@@ -108,13 +108,13 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <Link href="https://github.com/yourhandle" target="_blank">
+            <Link href="https://github.com/ayushsoni86" target="_blank">
               <FaGithub />
             </Link>
-            <Link href="https://linkedin.com/in/yourhandle" target="_blank">
+            <Link href="https://linkedin.com/in/ayushsoni86" target="_blank">
               <FaLinkedin />
             </Link>
-            <Link href="https://instagram.com/yourhandle" target="_blank">
+            <Link href="https://instagram.com/ayush.soni619" target="_blank">
               <FaInstagram />
             </Link>
           </motion.div>
