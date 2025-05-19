@@ -79,7 +79,7 @@ const Timeline = () => {
                 <div className="absolute left-0 -ml-5 top-12 h-4 w-4 rounded-full bg-indigo-600 md:hidden"></div>
 
                 <div className="flex items-center gap-2 mb-1">
-                  <div className="text-primary">
+                  <div className="text-indigo-600">
                     {isExperience ? (
                       <Briefcase size={18} />
                     ) : (
