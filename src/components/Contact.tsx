@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { Send } from "lucide-react";
 import SectionTitle from "./SectionTitle";
@@ -63,22 +63,22 @@ const Contact = () => {
       <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
         {/* Left */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Let's connect!</h3>
+          <h3 className="text-xl font-semibold mb-4">Let&apos;s connect!</h3>
           <p className="text-muted-foreground mb-6">
             I’m currently open to new opportunities. Feel free to drop a
             message.
           </p>
           <div className="flex gap-5 text-xl">
-            <a href="https://github.com/your-username" target="_blank">
+            <a href="https://github.com/ayushsoni86" target="_blank">
               <FaGithub className="hover:text-indigo-500" />
             </a>
-            <a href="https://linkedin.com/in/your-username" target="_blank">
+            <a href="https://linkedin.com/in/ayushsoni86" target="_blank">
               <FaLinkedin className="hover:text-indigo-500" />
             </a>
             <a href="https://twitter.com/your-username" target="_blank">
               <BsTwitterX className="hover:text-indigo-500" />
             </a>
-            <a href="mailto:you@example.com">
+            <a href="mailto:ayusoni86@gmail.com">
               <FaEnvelope className="hover:text-indigo-500" />
             </a>
           </div>

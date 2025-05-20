@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import { BsTwitterX } from "react-icons/bs";
 
@@ -36,14 +36,14 @@ const Footer = () => {
         {/* Right */}
         <div className="flex gap-4 items-center">
           <a
-            href="https://github.com/your-username"
+            href="https://github.com/ayushsoni86"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub className="hover:text-indigo-500 text-xl" />
           </a>
           <a
-            href="https://linkedin.com/in/your-username"
+            href="https://linkedin.com/in/ayushsoni86"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -56,7 +56,7 @@ const Footer = () => {
           >
             <BsTwitterX className="hover:text-indigo-500 text-xl" />
           </a>
-          <a href="mailto:you@example.com">
+          <a href="mailto:ayusoni86@gmail.com">
             <FaEnvelope className="hover:text-indigo-500 text-xl" />
           </a>
         </div>
