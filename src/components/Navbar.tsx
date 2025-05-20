@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 import { Menu, X } from "lucide-react";
 
@@ -10,27 +12,23 @@ const NAV_LINKS = [
   { label: "Experience", href: "#experience" },
   { label: "Services", href: "#services" },
   { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
+  { label: "Projects", href: "/projects" },
   { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("#hero");
+  const [activeHash, setActiveHash] = useState("#hero");
 
-  // Handle initial active link based on URL hash when component mounts
-  React.useEffect(() => {
-    const hash = window.location.hash;
-    if (hash && NAV_LINKS.some((link) => link.href === hash)) {
-      setActiveLink(hash);
-    }
-
-    // Set up scroll event listener to update active link
+  useEffect(() => {
+    if (pathname === "/projects") return;
     const handleScroll = () => {
-      // Find which section is currently in view
-      const sections = NAV_LINKS.map((link) => link.href.replace("#", ""));
+      const sections = NAV_LINKS.filter((link) =>
+        link.href.startsWith("#")
+      ).map((link) => link.href.replace("#", ""));
 
-      // We'll find the section closest to the top of the viewport
       let current = "";
       let minDistance = Infinity;
 
@@ -48,22 +46,38 @@ const Navbar = () => {
       });
 
       if (current) {
-        setActiveLink(`#${current}`);
+        setActiveHash(`#${current}`);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    // Initial check
     handleScroll();
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname]);
 
   const handleLinkClick = (href: string) => {
-    setActiveLink(href);
     setMobileMenuOpen(false);
+
+    if (href.startsWith("#")) {
+      if (pathname !== "/") {
+        // Redirect to home and preserve hash
+        router.push("/" + href);
+      } else {
+        setActiveHash(href);
+        document
+          .getElementById(href.replace("#", ""))
+          ?.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      router.push(href);
+    }
+  };
+
+  const isActive = (href: string) => {
+    if (href === "/projects") return pathname === "/projects";
+    if (href.startsWith("#")) return pathname === "/" && activeHash === href;
+    return false;
   };
 
   return (
@@ -71,30 +85,30 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <div className="flex-shrink-0 text-2xl font-bold text-gray-900 dark:text-white">
-            <a href="#hero">AyushSoni</a>
+          <div className="text-2xl font-bold text-gray-900 dark:text-white">
+            <Link href="/">AyushSoni</Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex md:items-center md:space-x-6">
             {NAV_LINKS.map(({ label, href }) => (
-              <a
+              <button
                 key={href}
-                href={href}
+                onClick={() => handleLinkClick(href)}
                 className={`
-                  relative px-3 py-2 text-sm font-medium transition-colors
+                  cursor-pointer relative px-3 py-2 text-sm font-medium transition-colors
                   text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white
                   after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-indigo-500 after:transition-all
                   hover:after:w-full
                   ${
-                    activeLink === href
+                    isActive(href)
                       ? "text-indigo-600 dark:text-indigo-400 after:w-full"
                       : ""
                   }
                 `}
               >
                 {label}
-              </a>
+              </button>
             ))}
             <ModeToggle />
           </div>
@@ -106,7 +120,7 @@ const Navbar = () => {
             </div>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none"
+              className="cursor-pointer text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -120,22 +134,21 @@ const Navbar = () => {
         <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {NAV_LINKS.map(({ label, href }) => (
-              <a
+              <button
                 key={href}
-                href={href}
                 onClick={() => handleLinkClick(href)}
                 className={`
-                  block px-3 py-2 rounded-md text-base font-medium
+                  cursor-pointer block w-full text-left px-3 py-2 rounded-md text-base font-medium
                   text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800
                   ${
-                    activeLink === href
+                    isActive(href)
                       ? "bg-indigo-500 text-white dark:bg-indigo-400"
                       : ""
                   }
                 `}
               >
                 {label}
-              </a>
+              </button>
             ))}
           </div>
         </div>

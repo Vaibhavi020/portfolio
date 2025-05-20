@@ -75,7 +75,7 @@ const Contact = () => {
             <a href="https://linkedin.com/in/ayushsoni86" target="_blank">
               <FaLinkedin className="hover:text-indigo-500" />
             </a>
-            <a href="https://twitter.com/your-username" target="_blank">
+            <a href="https://twitter.com/" target="_blank">
               <BsTwitterX className="hover:text-indigo-500" />
             </a>
             <a href="mailto:ayusoni86@gmail.com">
