@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💼 Ayush Soni – Developer Portfolio
 
-## Getting Started
+A modern, responsive, and animated developer portfolio built using **Next.js**, **Tailwind CSS**, and **ShadCN UI**. This portfolio showcases projects, skills, services, and experience with smooth scroll, light/dark themes, and engaging animations.
 
-First, run the development server:
+![Portfolio Screenshot](./public/assets/portfolio-preview.png)
+
+---
+
+## 🚀 Features
+
+- ⚡ Built with **Next.js 15 App Router**
+- 🎨 Styled with **Tailwind CSS + ShadCN UI**
+- 🌙 Dark/Light mode toggle
+- ✨ Smooth scroll and **Framer Motion** animations
+- 📱 Fully responsive across devices
+- 🧠 Projects section with cards, links, images, and animations
+- 🛠 Services, Skills, Experience, About, and Contact sections
+- 📎 Reusable components and clean folder structure
+- 📬 Contact via email, LinkedIn, Twitter, GitHub
+
+---
+
+## 📂 Tech Stack
+
+- **Next.js 15 (App Directory)**
+- **TypeScript**
+- **Tailwind CSS**
+- **ShadCN/UI**
+- **Framer Motion**
+- **Lucide Icons**
+- **Resend API**
+
+---
+
+## 🖼 Preview
+
+> **Live Site**: [https://ayushsoni.dev](https://ayushsoni.dev)
+
+---
+
+## 🛠 Setup & Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/AyushSoni86/portfolio-website.git
+cd portfolio-nextjs
+
+# Install dependencies
+npm install
+
+# Run locally
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be available at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Folder Structure
 
-## Learn More
+```
+.
+├── app/                # Next.js App Router
+│   ├── page.tsx        # Home Page
+│   ├── projects/       # Dynamic Projects Page
+│   └── ...
+├── components/         # Reusable Components (Navbar, Footer, Cards)
+├── public/assets/      # Images & Static Assets
+├── styles/             # Global Styles (if any)
+├── data/               # Data files (e.g., projects array)
+├── utils/              # send email function
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📸 Projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Projects are dynamically loaded using a project array. Each project card includes:
 
-## Deploy on Vercel
+- ✅ Title
+- ✅ Description with "Show More"
+- ✅ GitHub + Live Links
+- ✅ Image
+- ✅ Hover animation, border, and reveal on scroll
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Private projects can still be listed with image + description, omitting links.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📬 Contact
+
+If you'd like to collaborate or connect:
+
+- 📧 Email: [ayusoni86@gmail.com](mailto:ayusoni86@gmail.com)
+- 🔗 [LinkedIn](https://linkedin.com/in/ayushsoni86)
+- 🐦 [Twitter](https://twitter.com/)
+- 💻 [GitHub](https://github.com/AyushSoni86)
+
+## 🙏 Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [ShadCN UI](https://ui.shadcn.dev/)
+- [Framer Motion](https://www.framer.com/motion/)
