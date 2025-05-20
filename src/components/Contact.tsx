@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { Send } from "lucide-react";
+import SectionTitle from "./SectionTitle";
+import axios, { AxiosError } from "axios";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -17,6 +19,7 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -29,17 +32,22 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/send", {
-        method: "POST",
-        body: JSON.stringify(form),
-      });
+      const response = await axios.post("/api/send", form);
 
-      if (res.ok) {
+      if (response.data?.success) {
         setSubmitted(true);
         setForm({ name: "", email: "", message: "" });
+      } else {
+        setError(response.data?.message);
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      const axiosError = error as AxiosError<{
+        success: boolean;
+        message: string;
+      }>;
+      const errorMessage =
+        axiosError.response?.data.message || "Error in sending email";
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -50,9 +58,7 @@ const Contact = () => {
       id="contact"
       className="py-20 px-6 md:px-20 bg-background text-foreground"
     >
-      <h2 className="text-3xl font-bold text-center text-indigo-600 mb-12">
-        Get In Touch
-      </h2>
+      <SectionTitle title="CONTACT ME" />
 
       <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
         {/* Left */}
@@ -85,6 +91,7 @@ const Contact = () => {
             placeholder="Your name"
             value={form.name}
             onChange={handleChange}
+            className="focus-visible:ring-1 focus-visible:ring-indigo-500 focus-visible:border-indigo-500"
             required
           />
           <Input
@@ -93,6 +100,7 @@ const Contact = () => {
             placeholder="Your email"
             value={form.email}
             onChange={handleChange}
+            className="focus-visible:ring-1 focus-visible:ring-indigo-500 focus-visible:border-indigo-500"
             required
           />
           <Textarea
@@ -101,6 +109,7 @@ const Contact = () => {
             rows={7}
             value={form.message}
             onChange={handleChange}
+            className="focus-visible:ring-1 focus-visible:ring-indigo-500 focus-visible:border-indigo-500"
             required
           />
           <Button
@@ -111,7 +120,7 @@ const Contact = () => {
             <Send className="h-4 w-4" />
             {loading ? "Sending..." : "Send Message"}
           </Button>
-
+          {error && <p className="text-red-600 text-sm">{error}</p>}
           {submitted && (
             <p className="text-green-600 text-sm">
               Thank you! Your message has been sent.

@@ -2,8 +2,8 @@ import { resend } from "@/lib/resend";
 import ContactEmail from "../../emails/ContactEmail";
 
 export async function sendVerificationEmail(
-  senderName: string,
-  senderEmail: string,
+  name: string,
+  email: string,
   message: string
 ) {
   try {
@@ -11,8 +11,8 @@ export async function sendVerificationEmail(
       from: "no-reply@updates.ayushsoni.dev",
       to: "ayusoni86@gmail.com",
       subject: "New message from your portfolio",
-      react: ContactEmail({ senderName, senderEmail, message }),
-      replyTo: senderEmail,
+      react: ContactEmail({ name, email, message }),
+      replyTo: email,
     });
     return { success: true, message: "Email send succesfully " };
   } catch (emailerror) {
