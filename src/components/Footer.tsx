@@ -67,7 +67,7 @@ const Footer = () => {
               <FaGithub className="text-xl hover:text-yellow-500 transition" />
             </a>
             <a
-              href="https://www.linkedin.com/in/vaibhavi-deshpande-5a394225b/"
+              href="https://www.linkedin.com/in/vaibhavi020/"
               target="_blank"
               rel="noopener noreferrer"
             >

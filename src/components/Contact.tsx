@@ -72,7 +72,7 @@ const Contact = () => {
             <a href="https://github.com/Vaibhavi020" target="_blank">
               <FaGithub className="hover:text-yellow-500" />
             </a>
-            <a href="https://www.linkedin.com/in/vaibhavi-deshpande-5a394225b/" target="_blank">
+            <a href="https://www.linkedin.com/in/vaibhavi020/" target="_blank">
               <FaLinkedin className="hover:text-yellow-500" />
             </a>
             <a href="https://twitter.com/" target="_blank">

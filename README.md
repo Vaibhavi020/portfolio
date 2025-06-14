@@ -92,7 +92,7 @@ Private projects can still be listed with image + description, omitting links.
 If you'd like to collaborate or connect:
 
 - 📧 Email: [vaibhavideshpande0213@gmail.com](mailto:vaibhavideshpande0213@gmail.com)
-- 🔗 [LinkedIn](https://www.linkedin.com/in/vaibhavi-deshpande-5a394225b/)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/vaibhavi020/)
 - 🐦 [Twitter](https://twitter.com/)
 - 💻 [GitHub](https://github.com/Vaibhavi020)
 
