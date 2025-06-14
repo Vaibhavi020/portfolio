@@ -11,7 +11,7 @@ type TimeLine = {
   title: string;
   subtitle: string;
   role: string;
-  date: string;
+  date?: string;
   subject?: string;
 };
 
