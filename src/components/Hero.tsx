@@ -92,7 +92,7 @@ const Hero = () => {
               </Button>
             </a>
 
-            <a href="/assets/Ayush_Soni___Resume.pdf" download>
+            <a href="/assets/Vaibhavi_Resume.pdf" download>
               <Button className="bg-transparent border-1 border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white transition">
                 <Download className="h-4 w-4" />
                 Download Resume
