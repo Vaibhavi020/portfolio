@@ -23,21 +23,21 @@ const Skills = () => {
         {skillsData.map((group, index) => (
           <div
             key={index}
-            className="border border-border rounded-xl bg-muted/50 overflow-hidden shadow-sm hover:border-indigo-500 transition"
+            className="border border-border rounded-xl bg-muted/50 overflow-hidden shadow-sm hover:border-yellow-500 transition"
           >
             {/* Header */}
             <button
               onClick={() => toggle(index)}
-              className="w-full flex justify-between items-center px-6 py-4 text-left transition hover:bg-indigo-100 dark:hover:bg-transparent"
+              className="w-full flex justify-between items-center px-6 py-4 text-left transition hover:bg-yellow-100 dark:hover:bg-transparent"
             >
-              <span className="text-lg font-semibold text-indigo-600">
+              <span className="text-lg font-semibold text-yellow-600">
                 {group.category}
               </span>
               <motion.div
                 animate={{ rotate: openIndex === index ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <ChevronDown className="text-indigo-600" />
+                <ChevronDown className="text-yellow-600" />
               </motion.div>
             </button>
 
@@ -59,10 +59,10 @@ const Skills = () => {
                     {group.skills.map((skill, i) => (
                       <div
                         key={i}
-                        className="flex items-center gap-2 bg-background border border-border rounded-full px-4 py-2 hover:border-indigo-500 hover:bg-indigo-100 dark:hover:bg-indigo-900 transition"
+                        className="flex items-center gap-2 bg-background border border-border rounded-full px-4 py-2 hover:border-yellow-500 hover:bg-yellow-100 dark:hover:bg-yellow-900 transition"
                       >
                         {skill.icon && (
-                          <span className="text-indigo-600 text-lg">
+                          <span className="text-yellow-600 text-lg">
                             {skill.icon}
                           </span>
                         )}

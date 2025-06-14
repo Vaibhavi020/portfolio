@@ -39,7 +39,7 @@ export default function ScrollButton({
     <button
       onClick={handleClick}
       className={cn(
-        "fixed z-50 p-3 rounded-full text-white bg-primary shadow-lg transition-all duration-300 ease-in-out hover:scale-105 dark:bg-indigo-600",
+        "fixed z-50 p-3 rounded-full text-white bg-primary shadow-lg transition-all duration-300 ease-in-out hover:scale-105 dark:bg-yellow-600",
         direction === "up"
           ? "bottom-6 right-6"
           : "bottom-6 left-1/2 -translate-x-1/2",

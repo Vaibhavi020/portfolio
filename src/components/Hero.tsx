@@ -12,9 +12,9 @@ import Link from "next/link";
 import ScrollButton from "./ScrollButton";
 
 const images = [
-  "profile-about.jpg",
-  "profile-ayush.jpeg",
-  "ayush-soni-hero.jpeg",
+  "vaibhavi-profile1.jpg",
+  "vaibhavi-profile2.jpg",
+  "vaibhavi-about.jpg"
 ];
 
 const Hero = () => {
@@ -41,8 +41,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
           >
             Hi, I&apos;m{" "}
-            <span className="text-indigo-600 dark:text-indigo-400">
-              Ayush Soni
+            <span className="text-yellow-600 dark:text-yellow-400">
+            <br/>
+              Vaibhavi Deshpande
             </span>
           </motion.h1>
 
@@ -54,11 +55,9 @@ const Hero = () => {
           >
             <Typewriter
               words={[
-                "Software Engineer",
-                "Full Stack Developer",
+                "Technical Trainer",
+                "Freelance Web Developer",
                 "Traveller",
-                "Adventurer",
-                "Gamer",
               ]}
               loop
               cursor
@@ -87,14 +86,14 @@ const Hero = () => {
             transition={{ delay: 0.3 }}
           >
             <a href="#contact">
-              <Button className="bg-indigo-600 text-white hover:bg-indigo-700 transition">
+              <Button className="bg-yellow-600 text-white hover:bg-yellow-600 transition">
                 <Send className="h-4 w-4" />
                 Say Hello
               </Button>
             </a>
 
             <a href="/assets/Ayush_Soni___Resume.pdf" download>
-              <Button className="bg-transparent border-1 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white transition">
+              <Button className="bg-transparent border-1 border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white transition">
                 <Download className="h-4 w-4" />
                 Download Resume
               </Button>
@@ -108,15 +107,15 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <Link href="https://github.com/ayushsoni86" target="_blank">
+            <Link href="https://github.com/Vaibhavi020" target="_blank">
               <FaGithub />
             </Link>
-            <Link href="https://linkedin.com/in/ayushsoni86" target="_blank">
+            <Link href="https://www.linkedin.com/in/vaibhavi-deshpande-5a394225b/" target="_blank">
               <FaLinkedin />
             </Link>
-            <Link href="https://instagram.com/ayush.soni619" target="_blank">
+            {/* <Link href="https://instagram.com/vaibhavi02" target="_blank">
               <FaInstagram />
-            </Link>
+            </Link> */}
           </motion.div>
         </div>
 
@@ -137,7 +136,7 @@ const Hero = () => {
               <Image
                 key={currentImage}
                 src={`/assets/${images[currentImage]}`}
-                alt="Ayush Soni"
+                alt="Vaibhavi Deshpande"
                 fill
                 className="object-cover"
                 priority

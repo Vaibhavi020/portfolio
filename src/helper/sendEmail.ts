@@ -9,7 +9,7 @@ export async function sendVerificationEmail(
   try {
     await resend.emails.send({
       from: "no-reply@updates.ayushsoni.dev",
-      to: "ayusoni86@gmail.com",
+      to: "vaibhavideshpande0213@gmail.com",
       subject: "New message from your portfolio",
       react: ContactEmail({ name, email, message }),
       replyTo: email,

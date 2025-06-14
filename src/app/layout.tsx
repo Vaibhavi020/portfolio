@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ayush Soni",
+  title: "Vaibhavi Deshpande",
   description: "Portfolio Website",
 };
 

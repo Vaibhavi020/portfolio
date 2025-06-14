@@ -10,12 +10,12 @@ import ScrollButton from "./ScrollButton";
 const personalInfo = [
   {
     label: "Name",
-    value: "Ayush Soni",
+    value: "Vaibhavi Deshpande",
     icon: <CircleUser className="w-4 h-4 text-muted-foreground mt-0.5" />,
   },
   {
     label: "Date of Birth",
-    value: "November 28",
+    value: "January 02",
     icon: <Calendar className="w-4 h-4 text-muted-foreground mt-0.5" />,
   },
   {
@@ -25,7 +25,7 @@ const personalInfo = [
   },
   {
     label: "Email",
-    value: "ayusoni86@gmail.com",
+    value: "vaibhavideshpande0213@gmail.com",
     icon: <Mail className="w-4 h-4 text-muted-foreground mt-0.5" />,
   },
 ];
@@ -48,8 +48,8 @@ export default function AboutMe() {
         >
           <div className="relative w-[300px] h-[450px] md:w-[370px] md:h-[500px] mx-auto rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/assets/ayush-soni-hero.jpeg"
-              alt="About Ayush"
+              src="/assets/vaibhavi-about.jpg"
+              alt="About Vaibhavi"
               fill
               className="object-cover"
               priority
@@ -66,18 +66,18 @@ export default function AboutMe() {
         >
           <h2 className="text-3xl font-bold tracking-tight">
             I&apos;m a Passionate{" "}
-            <span className="text-indigo-600 dark:text-indigo-400">
-              Software Engineer
+            <span className="text-yellow-600 dark:text-yellow-400">
+              Technical Trainer
             </span>
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed">
-            Hi, I&apos;m a dedicated Software Developer based in India. I have
-            over 3 years of experience building modern and performant full-stack
-            applications. Currently, I am working at{" "}
-            <span className="font-semibold text-indigo-600 dark:text-indigo-400">
-              Successive Digital
-            </span>{" "}
-            as a Software Engineer.
+            Hi, I&apos;m a dedicated Technical Trainer based in India. I have
+            over 2 years of experience with expertise in Java, Prompt Eng. 
+            I design and deliver training programs that simplify complex concepts and build industry-ready skills.
+            Currently, I am working at{" "}
+            <span className="font-semibold text-yellow-600 dark:text-yellow-400">
+              Gyanteerth            </span>{" "}
+            as a Technical Trainer, Project Co-ordinator.
             <br />
             <br />I love turning complex problems into elegant solutions, and
             I’m always open to collaborating on exciting projects. Let’s build
@@ -87,16 +87,16 @@ export default function AboutMe() {
           {/* Experience badges */}
           <div className="flex gap-12 flex-wrap">
             <div>
-              <h3 className="text-2xl font-bold text-primary">3+</h3>
+              <h3 className="text-2xl font-bold text-primary">2+</h3>
               <p className="text-muted-foreground">Years Experience</p>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-primary">6+</h3>
-              <p className="text-muted-foreground">Projects Completed</p>
+              <h3 className="text-2xl font-bold text-primary">1000+</h3>
+              <p className="text-muted-foreground">Students Trained Successfully</p>
             </div>
             <div>
               <h3 className="text-2xl font-bold text-primary">24/7</h3>
-              <p className="text-muted-foreground">Support Available</p>
+              <p className="text-muted-foreground">Available as a Trainer</p>
             </div>
           </div>
 

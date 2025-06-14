@@ -31,14 +31,14 @@ const Timeline = () => {
       {/* Tab Buttons */}
       <div className="flex justify-center gap-4 mb-12">
         <Button
-          className={`${isExperience ? "bg-indigo-600 text-white" : "bg-transparent border border-indigo-600 text-indigo-600 hover:text-white"}   hover:bg-indigo-700 transition`}
+          className={`${isExperience ? "bg-yellow-600 text-white" : "bg-transparent border border-yellow-600 text-yellow-600 hover:text-white"}   hover:bg-yellow-700 transition`}
           onClick={() => setActiveTab("EXPERIENCE")}
         >
           <Briefcase className="h-4 w-4" />
           Experience
         </Button>
         <Button
-          className={`${!isExperience ? "bg-indigo-600 text-white" : "bg-transparent border border-indigo-600 text-indigo-600 hover:text-white"} hover:bg-indigo-700 transition`}
+          className={`${!isExperience ? "bg-yellow-600 text-white" : "bg-transparent border border-yellow-600 text-yellow-600 hover:text-white"} hover:bg-yellow-700 transition`}
           onClick={() => setActiveTab("EDUCATION")}
         >
           <GraduationCap className="h-4 w-4" />
@@ -65,7 +65,7 @@ const Timeline = () => {
               `}
             >
               {/* Dot in the middle */}
-              <div className="absolute left-1/2 top-12 -ml-2.5 h-5 w-5 rounded-full bg-indigo-600 border-4 border-background hidden md:block"></div>
+              <div className="absolute left-1/2 top-12 -ml-2.5 h-5 w-5 rounded-full bg-yellow-600 border-4 border-background hidden md:block"></div>
 
               <div
                 className={`
@@ -76,10 +76,10 @@ const Timeline = () => {
                 `}
               >
                 {/* Mobile dot indicator */}
-                <div className="absolute left-0 -ml-5 top-12 h-4 w-4 rounded-full bg-indigo-600 md:hidden"></div>
+                <div className="absolute left-0 -ml-5 top-12 h-4 w-4 rounded-full bg-yellow-600 md:hidden"></div>
 
                 <div className="flex items-center gap-2 mb-1">
-                  <div className="text-indigo-600">
+                  <div className="text-yellow-600">
                     {isExperience ? (
                       <Briefcase size={18} />
                     ) : (

@@ -69,17 +69,17 @@ const Contact = () => {
             message.
           </p>
           <div className="flex gap-5 text-xl">
-            <a href="https://github.com/ayushsoni86" target="_blank">
-              <FaGithub className="hover:text-indigo-500" />
+            <a href="https://github.com/Vaibhavi020" target="_blank">
+              <FaGithub className="hover:text-yellow-500" />
             </a>
-            <a href="https://linkedin.com/in/ayushsoni86" target="_blank">
-              <FaLinkedin className="hover:text-indigo-500" />
+            <a href="https://www.linkedin.com/in/vaibhavi-deshpande-5a394225b/" target="_blank">
+              <FaLinkedin className="hover:text-yellow-500" />
             </a>
             <a href="https://twitter.com/" target="_blank">
-              <BsTwitterX className="hover:text-indigo-500" />
+              <BsTwitterX className="hover:text-yellow-500" />
             </a>
-            <a href="mailto:ayusoni86@gmail.com">
-              <FaEnvelope className="hover:text-indigo-500" />
+            <a href="mailto:vaibhavideshpande0213@gmail.com">
+              <FaEnvelope className="hover:text-yellow-500" />
             </a>
           </div>
         </div>
@@ -91,7 +91,7 @@ const Contact = () => {
             placeholder="Your name"
             value={form.name}
             onChange={handleChange}
-            className="focus-visible:ring-1 focus-visible:ring-indigo-500 focus-visible:border-indigo-500"
+            className="focus-visible:ring-1 focus-visible:ring-yellow-500 focus-visible:border-yellow-500"
             required
           />
           <Input
@@ -100,7 +100,7 @@ const Contact = () => {
             placeholder="Your email"
             value={form.email}
             onChange={handleChange}
-            className="focus-visible:ring-1 focus-visible:ring-indigo-500 focus-visible:border-indigo-500"
+            className="focus-visible:ring-1 focus-visible:ring-yellow-500 focus-visible:border-yellow-500"
             required
           />
           <Textarea
@@ -109,13 +109,13 @@ const Contact = () => {
             rows={7}
             value={form.message}
             onChange={handleChange}
-            className="focus-visible:ring-1 focus-visible:ring-indigo-500 focus-visible:border-indigo-500"
+            className="focus-visible:ring-1 focus-visible:ring-yellow-500 focus-visible:border-yellow-500"
             required
           />
           <Button
             type="submit"
             disabled={loading}
-            className="bg-indigo-600 text-white hover:bg-indigo-700 transition"
+            className="bg-yellow-600 text-white hover:bg-yellow-700 transition"
           >
             <Send className="h-4 w-4" />
             {loading ? "Sending..." : "Send Message"}

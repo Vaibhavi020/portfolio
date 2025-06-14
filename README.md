@@ -1,4 +1,4 @@
-# 💼 Ayush Soni – Developer Portfolio
+# 💼 Vaibhavi Deshpande – Developer Portfolio
 
 A modern, responsive, and animated developer portfolio built using **Next.js**, **Tailwind CSS**, and **ShadCN UI**. This portfolio showcases projects, skills, services, and experience with smooth scroll, light/dark themes, and engaging animations.
 
@@ -42,7 +42,7 @@ A modern, responsive, and animated developer portfolio built using **Next.js**, 
 
 ```bash
 # Clone the repository
-git clone https://github.com/AyushSoni86/portfolio-website.git
+git clone https://github.com/Vaibhavi020/portfolio-website.git
 cd portfolio-nextjs
 
 # Install dependencies
@@ -91,10 +91,10 @@ Private projects can still be listed with image + description, omitting links.
 
 If you'd like to collaborate or connect:
 
-- 📧 Email: [ayusoni86@gmail.com](mailto:ayusoni86@gmail.com)
-- 🔗 [LinkedIn](https://linkedin.com/in/ayushsoni86)
+- 📧 Email: [vaibhavideshpande0213@gmail.com](mailto:vaibhavideshpande0213@gmail.com)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/vaibhavi-deshpande-5a394225b/)
 - 🐦 [Twitter](https://twitter.com/)
-- 💻 [GitHub](https://github.com/AyushSoni86)
+- 💻 [GitHub](https://github.com/Vaibhavi020)
 
 ## 🙏 Acknowledgements
 

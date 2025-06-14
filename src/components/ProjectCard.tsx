@@ -29,7 +29,7 @@ const ProjectCard = ({
         y: -6,
         boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
       }}
-      className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden transition-all duration-300 hover:border-indigo-500 dark:hover:border-indigo-400 flex flex-col h-full"
+      className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden transition-all duration-300 hover:border-yellow-500 dark:hover:border-yellow-400 flex flex-col h-full"
     >
       {/* Image */}
       <div className="relative w-full h-56 p-3 pb-0">
@@ -53,7 +53,7 @@ const ProjectCard = ({
               {description.length > 120 && (
                 <button
                   onClick={() => setShowFull(true)}
-                  className="text-indigo-600 dark:text-indigo-400 text-xs mt-1 hover:underline"
+                  className="text-yellow-600 dark:text-yellow-400 text-xs mt-1 hover:underline"
                 >
                   Show more
                 </button>
@@ -64,7 +64,7 @@ const ProjectCard = ({
               <p>{description}</p>
               <button
                 onClick={() => setShowFull(false)}
-                className="text-indigo-600 dark:text-indigo-400 text-xs mt-1 hover:underline"
+                className="text-yellow-600 dark:text-yellow-400 text-xs mt-1 hover:underline"
               >
                 Show less
               </button>
@@ -73,12 +73,12 @@ const ProjectCard = ({
         </div>
 
         {/* Links */}
-        <div className="mt-auto pt-3 border-t border-gray-100 dark:border-gray-800 flex gap-4 text-indigo-600 dark:text-indigo-400 text-xl">
+        <div className="mt-auto pt-3 border-t border-gray-100 dark:border-gray-800 flex gap-4 text-yellow-600 dark:text-yellow-400 text-xl">
           <Link href={github} target="_blank" aria-label="GitHub">
-            <FaGithub className="hover:text-indigo-800 transition" />
+            <FaGithub className="hover:text-yellow-800 transition" />
           </Link>
           <Link href={live} target="_blank" aria-label="Live Site">
-            <FaExternalLinkAlt className="hover:text-indigo-800 transition" />
+            <FaExternalLinkAlt className="hover:text-yellow-800 transition" />
           </Link>
         </div>
       </div>

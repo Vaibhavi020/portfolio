@@ -10,8 +10,8 @@ const NAV_LINKS = [
   { label: "Home", href: "#hero" },
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
-  { label: "Services", href: "#services" },
-  { label: "Skills", href: "#skills" },
+  // { label: "Services", href: "#services" },
+  // { label: "Skills", href: "#skills" },
   { label: "Projects", href: "/projects" },
   { label: "Contact", href: "#contact" },
 ];
@@ -81,12 +81,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-md fixed w-full z-50 transition-all duration-300">
+    <nav className="bg-white dark:bg-yellow-600 shadow-md fixed w-full z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="text-2xl font-bold text-gray-900 dark:text-white">
-            <Link href="/">AyushSoni</Link>
+            <Link href="/">Vaibhavi Deshpande</Link>
           </div>
 
           {/* Desktop Menu */}
@@ -98,11 +98,11 @@ const Navbar = () => {
                 className={`
                   cursor-pointer relative px-3 py-2 text-sm font-medium transition-colors
                   text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white
-                  after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-indigo-500 after:transition-all
+                  after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-yellow-500 after:transition-all
                   hover:after:w-full
                   ${
                     isActive(href)
-                      ? "text-indigo-600 dark:text-indigo-400 after:w-full"
+                      ? "text-yellow-600 dark:text-yellow-400 after:w-full"
                       : ""
                   }
                 `}
@@ -142,7 +142,7 @@ const Navbar = () => {
                   text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800
                   ${
                     isActive(href)
-                      ? "bg-indigo-500 text-white dark:bg-indigo-400"
+                      ? "bg-yellow-500 text-white dark:bg-yellow-400"
                       : ""
                   }
                 `}
